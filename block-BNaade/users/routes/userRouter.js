@@ -48,7 +48,7 @@ router.get("/:id/edit", (req, res) => {
 
 router.post("/:id", (req, res) => {
     var id = req.params.id;
-    User.findByIdAndUpdate(id, (err, nextuser) => {
+    User.findByIdAndUpdate(id, req.body ,(err, nextuser) => {
         if (err) return next(err);
         res.render("/users/" + id)
     });
