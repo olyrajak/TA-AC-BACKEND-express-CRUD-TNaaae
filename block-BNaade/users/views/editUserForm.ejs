@@ -19,7 +19,7 @@
             <section>
                 <div class="register-wrapper">
                     <div class="register-block">
-                        <form action="/users" method="post">
+                        <form action="/users/<%= user.id%>" method="post">
                             <h2>Add New User</h2>
                             <input type="text" name="name" placeholder="Enter Name" value="<%= user.name %>">
                             <input type="email" name="email" placeholder="Enter Email" value="<%= user.email %>">
